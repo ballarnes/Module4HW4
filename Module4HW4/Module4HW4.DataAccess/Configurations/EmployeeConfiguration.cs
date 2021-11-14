@@ -29,6 +29,13 @@ namespace Module4HW4.DataAccess.Configurations
                 .WithMany(o => o.Employees)
                 .HasForeignKey(f => f.OfficeId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasData(
+                new Employee { EmployeeId = 1, DateOfBirth = new DateTime(1995, 05, 25), FirstName = "Igor", LastName = "Gorohov", HiredDate = new DateTime(2015, 07, 05), OfficeId = 1, TitleId = 3 },
+                new Employee { EmployeeId = 2, DateOfBirth = new DateTime(1997, 01, 09), FirstName = "Ivan", LastName = "Gorohov", HiredDate = new DateTime(2015, 07, 05), OfficeId = 1, TitleId = 3 },
+                new Employee { EmployeeId = 3, DateOfBirth = new DateTime(1980, 10, 13), FirstName = "Aleksandr", LastName = "Yakubovskiy", HiredDate = new DateTime(2016, 03, 20), OfficeId = 1, TitleId = 2 },
+                new Employee { EmployeeId = 4, DateOfBirth = new DateTime(1988, 09, 08), FirstName = "Ekaterina", LastName = "Ponomarenko", HiredDate = new DateTime(2018, 08, 10), OfficeId = 1, TitleId = 1 },
+                new Employee { EmployeeId = 5, DateOfBirth = new DateTime(1991, 07, 30), FirstName = "Maria", LastName = "Belova", HiredDate = new DateTime(2018, 10, 14), OfficeId = 1, TitleId = 2 });
         }
     }
 }

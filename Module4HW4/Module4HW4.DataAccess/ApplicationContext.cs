@@ -21,6 +21,7 @@ namespace Module4HW4.DataAccess
         public DbSet<Office> Office { get; set; }
         public DbSet<EmployeeProject> EmployeeProject { get; set; }
         public DbSet<Project> Project { get; set; }
+        public DbSet<Client> Client { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,6 +30,7 @@ namespace Module4HW4.DataAccess
             modelBuilder.ApplyConfiguration(new TitleConfiguration());
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeProjectConfiguration());
+            modelBuilder.ApplyConfiguration(new ClientConfiguration());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

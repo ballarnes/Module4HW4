@@ -16,6 +16,9 @@ namespace Module4HW4.DataAccess.Configurations
             builder.ToTable("Office").HasKey(o => o.OfficeId);
             builder.Property(o => o.Title).IsRequired().HasMaxLength(100);
             builder.Property(o => o.Location).IsRequired().HasMaxLength(100);
+
+            builder.HasData(
+                new Office() { OfficeId = 1, Title = "Main Office", Location = "Kyiv" });
         }
     }
 }
